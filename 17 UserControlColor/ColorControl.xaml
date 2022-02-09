@@ -1,7 +1,7 @@
 ﻿<UserControl x:Class="_17_UserControlColor.ColorControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             Name="colorPicker">
+             Name="colorControl">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
@@ -13,15 +13,15 @@
             <ColumnDefinition Width="auto"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Slider Name="sliderRed" Minimum="0" Maximum="255"
-                Value="{Binding ElementName=colorPicker, Path=Red}"></Slider>
+                Value="{Binding ElementName=colorControl, Path=Red}"></Slider>
         <Slider Name="sliderGreen" Minimum="0" Maximum="255" Grid.Row="1"
-                Value="{Binding ElementName=colorPicker, Path=Green}"></Slider>
+                Value="{Binding ElementName=colorControl, Path=Green}"></Slider>
         <Slider Name="sliderBlue" Minimum="0" Maximum="255" Grid.Row="2"
-                Value="{Binding ElementName=colorPicker, Path=Blue}"></Slider>
+                Value="{Binding ElementName=colorControl, Path=Blue}"></Slider>
         <Rectangle Grid.Column="1" Grid.RowSpan="3" Width="50" Stroke="Black" StrokeThickness="1"
                    StrokeDashArray="2 1">
             <Rectangle.Fill>
-                <SolidColorBrush Color="{Binding ElementName=colorPicker,Path=Color}"></SolidColorBrush>
+                <SolidColorBrush Color="{Binding ElementName=colorControl,Path=Color}"></SolidColorBrush>
             </Rectangle.Fill>
         </Rectangle>
     </Grid>
